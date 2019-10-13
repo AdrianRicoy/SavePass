@@ -12,7 +12,7 @@ namespace SavePass
     {
         private byte[] Clave = Encoding.ASCII.GetBytes("wVEW!ju3");
         private byte[] IV = Encoding.ASCII.GetBytes("Devjoker7.37hAES");
-        const string PATH = @".\data.txt";
+        const string PATH = @".\data.img";
         /// <summary>
         /// Constructor por defecto
         /// </summary>
