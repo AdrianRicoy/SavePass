@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SavePass
 {
-    class HandleUserPass
+    class HandleUserPass : DataAccess
     {
         /// <summary>
         /// Constructor por defecto
@@ -18,7 +18,7 @@ namespace SavePass
         /// <returns>Lista de tipo string</returns>
         public List<String> GetDataPassAndUser()
         {
-            List<String> data = new List<string>();
+            List<String> data = ReadFile();
 
             return data;
         }
@@ -30,7 +30,11 @@ namespace SavePass
         /// <returns></returns>
         public bool AddUserPass(string user, string pass)
         {
-            return true;
+            List<String> list = new List<String>();
+
+            list.Add(user + ";" + pass);
+
+            return WriteFile(list);
         }
         /// <summary>
         /// Actualizar usuario y contraseña
