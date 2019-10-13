@@ -41,13 +41,22 @@ namespace SavePass
                     MessageBoxIcon.Question, MessageBoxDefaultButton.Button1,
                     MessageBoxOptions.RightAlign);
 
-                if (result == DialogResult.OK) this.Close();
+                if (result == DialogResult.OK) Application.Exit();
             }
         }
-
+        /// <summary>
+        /// Valida si la contraseña es correcta, para iniciar la aplicación
+        /// </summary>
+        /// <param name="pass">Contraseña a evaluar</param>
+        /// <returns>Boolean</returns>
         private bool ValidatePass(string pass)
         {
             return pass == "123" ? true : false;
+        }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
