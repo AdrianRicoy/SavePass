@@ -23,7 +23,8 @@ namespace SavePass
         /// </summary>
         private void GetDataUserPass()
         {
-            List<String> lstUserPasword = new HandleUserPass().GetDataPassAndUser();
+            HandleUserPass data = new HandleUserPass();
+            List<String> lstUserPasword = data.GetDataPassAndUser();
             
 
             foreach (String user in lstUserPasword)
