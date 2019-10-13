@@ -34,6 +34,7 @@
             this.btnAccept = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,7 +65,7 @@
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Location = new System.Drawing.Point(20, 189);
             this.txtPass.Name = "txtPass";
-            this.txtPass.PasswordChar = '#';
+            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(388, 31);
             this.txtPass.TabIndex = 2;
             // 
@@ -85,6 +86,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MintCream;
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Location = new System.Drawing.Point(-4, -5);
             this.panel1.Name = "panel1";
@@ -107,6 +109,15 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "SavePass";
+            // 
             // Validate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -123,6 +134,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Validate";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,5 +148,6 @@
         private System.Windows.Forms.Button btnAccept;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label label3;
     }
 }
