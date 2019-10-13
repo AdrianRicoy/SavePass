@@ -21,6 +21,7 @@ namespace SavePass
             if(!File.Exists(PATH))
             {
                 FileStream fs = File.Create(PATH);
+                fs.Close();
             }
         }
         /// <summary>
