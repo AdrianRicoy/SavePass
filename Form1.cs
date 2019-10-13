@@ -25,7 +25,6 @@ namespace SavePass
         {
             HandleUserPass data = new HandleUserPass();
             List<String> lstUserPasword = data.GetDataPassAndUser();
-            
 
             foreach (String user in lstUserPasword)
             {
@@ -86,6 +85,42 @@ namespace SavePass
             }
 
             txtPass.Text = result;
+        }
+
+        private void BtnMin_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            string user = txtUser.Text;
+
+            bool delete = new HandleUserPass().DeleteUserPass(user);
+
+            string message = "The username and password have been successfully deleted.";
+            string caption = "Right";
+            
+
+            if (!delete)
+            {
+                message = "Opp! The record could not be deleted.";
+                caption = "Error";
+            } 
+
+            MessageBoxButtons buttons = MessageBoxButtons.OK;
+            DialogResult result;
+
+            // Displays the MessageBox.
+
+            result = MessageBox.Show(this, message, caption, buttons,
+                MessageBoxIcon.None, MessageBoxDefaultButton.Button1,
+                MessageBoxOptions.RightAlign);
+
+            Index index = new Index();
+            index.Show();
+
+            this.Close();
         }
     }
 }
