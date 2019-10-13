@@ -40,7 +40,11 @@ namespace SavePass
                 lstData.Items.Add(list);
             } 
         }
-
+        /// <summary>
+        /// Agregar un nuevo registro al archivo de datos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             string pass = txtPass.Text;
@@ -86,12 +90,20 @@ namespace SavePass
 
             txtPass.Text = result;
         }
-
+        /// <summary>
+        /// Minimizar el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnMin_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
-
+        /// <summary>
+        /// Eliminar un registro dentro del archivo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnDelete_Click(object sender, EventArgs e)
         {
             string user = txtUser.Text;
@@ -107,6 +119,42 @@ namespace SavePass
                 message = "Opp! The record could not be deleted.";
                 caption = "Error";
             } 
+
+            MessageBoxButtons buttons = MessageBoxButtons.OK;
+            DialogResult result;
+
+            // Displays the MessageBox.
+
+            result = MessageBox.Show(this, message, caption, buttons,
+                MessageBoxIcon.None, MessageBoxDefaultButton.Button1,
+                MessageBoxOptions.RightAlign);
+
+            Index index = new Index();
+            index.Show();
+
+            this.Close();
+        }
+        /// <summary>
+        /// Actualizar un registro en el archivo de datos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+            string user = txtUser.Text;
+            string pass = txtPass.Text;
+
+            bool update = new HandleUserPass().UpdateUserPass(user, pass);
+
+            string message = "The username ( " + user + " ) and password have been updated";
+            string caption = "Right";
+
+
+            if (!update)
+            {
+                message = "Opp! The record could not be updated.";
+                caption = "Error";
+            }
 
             MessageBoxButtons buttons = MessageBoxButtons.OK;
             DialogResult result;
