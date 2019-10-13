@@ -69,7 +69,23 @@ namespace SavePass
         /// <returns>Lista de datos del documento</returns>
         public bool DeleteFile(List<String> list)
         {
-            return true;
+            List<string> data = ReadFile();
+            List<string> lstAux = ReadFile();
+
+            foreach(string user in list)
+            {
+                foreach (string line in data)
+                {
+                    if (line.Split(';')[0] == user)
+                    {
+                        lstAux.Remove(line);
+                    }
+                }
+            }
+
+            File.WriteAllText(PATH, "");
+
+            return WriteFile(lstAux);
         }
         /// <summary>
         /// Permite cifrar el mensaje

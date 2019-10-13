@@ -50,9 +50,13 @@ namespace SavePass
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public bool DeleteUserPass(int id)
+        public bool DeleteUserPass(string user)
         {
-            return true;
+            List<String> list = new List<String>();
+
+            list.Add(user);
+
+            return DeleteFile(list);
         }
     }
 }
