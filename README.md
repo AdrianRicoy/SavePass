@@ -4,6 +4,7 @@
 
 ![](./Captura2.PNG)
 
+> Password for use App: S=kLogW
 
 > For Add:
 
