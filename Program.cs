@@ -16,7 +16,11 @@ namespace SavePass
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Validate());
+
+            Validate validate = new Validate();
+            validate.Show();
+
+            Application.Run();
         }
     }
 }
