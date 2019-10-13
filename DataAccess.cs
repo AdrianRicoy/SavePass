@@ -61,7 +61,23 @@ namespace SavePass
         /// <returns>Lista de datos del documento</returns>
         public bool UpdateFile(List<String> list)
         {
-            return true;
+            List<string> data = ReadFile();
+            List<string> lstAux = ReadFile();
+
+            foreach (string user in list)
+            {
+                for(int i = 0; i < data.Count; i++)
+                {
+                    if(data[i].Split(';')[0] == user.Split(';')[0])
+                    {
+                        lstAux[i] = user;
+                    }
+                }
+            }
+
+            File.WriteAllText(PATH, "");
+
+            return WriteFile(lstAux);
         }
         /// <summary>
         /// Borrar los datos en documento

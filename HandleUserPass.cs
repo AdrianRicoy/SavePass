@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace SavePass
 {
     class HandleUserPass : DataAccess
@@ -41,9 +37,12 @@ namespace SavePass
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public bool UpdateUserPass(int id)
+        public bool UpdateUserPass(string user, string pass)
         {
-            return true;
+            List<string> data = new List<string>();
+
+            data.Add(user + ";" + pass);
+            return UpdateFile(data);
         }
         /// <summary>
         /// Borrar un usuario y contraseña
