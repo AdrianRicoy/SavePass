@@ -51,7 +51,7 @@ namespace SavePass
         /// <returns>Boolean</returns>
         private bool ValidatePass(string pass)
         {
-            return pass == "123" ? true : false;
+            return pass == "S=kLogW" ? true : false;
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
