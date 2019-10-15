@@ -1,10 +1,14 @@
 # SavePass: Save your passwords
 
+> Password for use App: Pass: Hours Day Month Year
+
+Example:
+
+![](./Captura3.PNG) Then, your password: Pass: 2214102019
+
 ![](./Captura.PNG)
 
 ![](./Captura2.PNG)
-
-> Password for use App: S=kLogW
 
 > For Add:
 
