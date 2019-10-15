@@ -12,6 +12,7 @@ namespace SavePass
 {
     public partial class Index : Form
     {
+        private bool showTable = false;
         public Index()
         {
             InitializeComponent();
@@ -169,6 +170,27 @@ namespace SavePass
             index.Show();
 
             this.Close();
+        }
+        /// <summary>
+        /// Hacer más grande o pequeña la tabla de datos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            if(!showTable)
+            {
+                lstData.Location = new Point(283, 35);
+                btnShowData.Location = new Point(283, 0);
+                lstData.Height = 408;
+                showTable = true;
+            } else
+            {
+                lstData.Location = new Point(283, 258);
+                btnShowData.Location = new Point(283, 216);
+                lstData.Height = 192;
+                showTable = false;
+            }
         }
     }
 }

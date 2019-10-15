@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,7 +40,6 @@
             this.txtPass = new System.Windows.Forms.TextBox();
             this.BtnRandom = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.lstData = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -47,14 +48,15 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnMin = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnShowData = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(171)))), ((int)(((byte)(148)))));
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -63,6 +65,29 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(285, 470);
             this.panel1.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(171)))), ((int)(((byte)(148)))));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.Location = new System.Drawing.Point(11, 441);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(98, 18);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Version: 1.1.2";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Yu Gothic UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label7.Location = new System.Drawing.Point(103, 169);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(101, 86);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "╗╝";
             // 
             // label3
             // 
@@ -116,7 +141,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(283, 109);
+            this.label4.Location = new System.Drawing.Point(323, 91);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 25);
             this.label4.TabIndex = 2;
@@ -124,18 +149,18 @@
             // 
             // txtUser
             // 
-            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(283, 146);
+            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.Location = new System.Drawing.Point(395, 91);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(182, 24);
+            this.txtUser.Size = new System.Drawing.Size(270, 31);
             this.txtUser.TabIndex = 3;
             // 
             // txtPass
             // 
-            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(471, 146);
+            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Location = new System.Drawing.Point(395, 143);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(185, 24);
+            this.txtPass.Size = new System.Drawing.Size(270, 31);
             this.txtPass.TabIndex = 4;
             // 
             // BtnRandom
@@ -144,7 +169,7 @@
             this.BtnRandom.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnRandom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRandom.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtnRandom.Location = new System.Drawing.Point(703, 161);
+            this.BtnRandom.Location = new System.Drawing.Point(702, 209);
             this.BtnRandom.Name = "BtnRandom";
             this.BtnRandom.Size = new System.Drawing.Size(95, 37);
             this.BtnRandom.TabIndex = 5;
@@ -162,16 +187,6 @@
             this.label5.Size = new System.Drawing.Size(519, 25);
             this.label5.TabIndex = 6;
             this.label5.Text = "_______________________________________";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(283, 221);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 25);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Data";
             // 
             // btnClose
             // 
@@ -199,9 +214,9 @@
             this.lstData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lstData.ForeColor = System.Drawing.SystemColors.Desktop;
             this.lstData.HideSelection = false;
-            this.lstData.Location = new System.Drawing.Point(288, 258);
+            this.lstData.Location = new System.Drawing.Point(283, 258);
             this.lstData.Name = "lstData";
-            this.lstData.Size = new System.Drawing.Size(500, 180);
+            this.lstData.Size = new System.Drawing.Size(514, 192);
             this.lstData.TabIndex = 9;
             this.lstData.UseCompatibleStateImageBehavior = false;
             this.lstData.View = System.Windows.Forms.View.Details;
@@ -229,7 +244,7 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnDelete.Location = new System.Drawing.Point(702, 209);
+            this.btnDelete.Location = new System.Drawing.Point(703, 160);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(95, 37);
             this.btnDelete.TabIndex = 10;
@@ -266,41 +281,45 @@
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Yu Gothic UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label7.Location = new System.Drawing.Point(103, 169);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(101, 86);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "╗╝";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(466, 109);
+            this.label8.Location = new System.Drawing.Point(283, 146);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(106, 25);
             this.label8.TabIndex = 13;
             this.label8.Text = "Password";
+            // 
+            // btnShowData
+            // 
+            this.btnShowData.BackColor = System.Drawing.Color.Transparent;
+            this.btnShowData.FlatAppearance.BorderSize = 0;
+            this.btnShowData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowData.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.btnShowData.ForeColor = System.Drawing.Color.Black;
+            this.btnShowData.Location = new System.Drawing.Point(283, 216);
+            this.btnShowData.Name = "btnShowData";
+            this.btnShowData.Size = new System.Drawing.Size(73, 34);
+            this.btnShowData.TabIndex = 14;
+            this.btnShowData.Text = "Data";
+            this.btnShowData.UseVisualStyleBackColor = false;
+            this.btnShowData.Click += new System.EventHandler(this.Button1_Click);
             // 
             // Index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lstData);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.BtnRandom);
+            this.Controls.Add(this.btnShowData);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnMin);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.lstData);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.BtnRandom);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label4);
@@ -331,7 +350,6 @@
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Button BtnRandom;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ListView lstData;
         private System.Windows.Forms.ColumnHeader columnHeader1;
@@ -342,6 +360,8 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnShowData;
+        private System.Windows.Forms.Label label6;
     }
 }
 
