@@ -1,6 +1,6 @@
 # SavePass: Save your passwords
 
-> Password for use App: Pass: Hours Day Month Year
+> Password for use App: *Pass: Hours Day Month Year*
 
 Example:
 
