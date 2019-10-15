@@ -4,7 +4,7 @@
 
 Example:
 
-![](./Captura3.PNG) Then, your password: Pass: 2214102019
+![](./Captura3.PNG) Then, your password: ```Pass: 2214102019```
 
 ![](./Captura.PNG)
 
