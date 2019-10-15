@@ -24,6 +24,6 @@ Language: C# .NETFramework,Version=v4.7.2
 
 Tested on windows systems
 
-Version: 1.1.0
+Version: 1.1.2
 
 Status: Completed

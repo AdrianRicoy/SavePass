@@ -51,7 +51,9 @@ namespace SavePass
         /// <returns>Boolean</returns>
         private bool ValidatePass(string pass)
         {
-            return pass == "S=kLogW" ? true : false;
+            string password = string.Format("Pass: {0}{1}{2}{3}", 
+                      DateTime.Now.Hour, DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year);
+            return pass == password ? true : false;
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
